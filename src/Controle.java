@@ -5,6 +5,7 @@ public class Controle  {
    private int index = 0;
 
    public void inserir(Empregado empregado){
+
        lista[index++] = empregado;
    }
 
