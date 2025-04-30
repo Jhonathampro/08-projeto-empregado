@@ -7,10 +7,30 @@ public class util {
 
 
     public void menu(){
-        inserir();
-        pesquisar();
-        pesquisar();
-        listar();
+        int opc;
+        String aux = "1. Inserir\n2. Pesquisar\n3. Listar\n4.finalizar";
+
+        do {
+            opc = parseInt(showInputDialog(aux));
+            if (opc < 1 || opc > 4) {
+                showMessageDialog(null, "Opção Invalída");
+            }
+
+            switch (opc) {
+                case 1:
+                    inserir();
+                    break;
+                case 2:
+                    pesquisar();
+                    break;
+                case 3:
+                    listar();
+                    break;
+                case 4:
+                    showMessageDialog(null, "Finalizando a execução");
+
+            }
+        }while (opc != 4);
 
     }
 
